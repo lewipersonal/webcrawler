@@ -37,10 +37,6 @@ class WebCrawler
 				continue;
 			}
 
-			// There is a problem with relative urls
-
-			var_dump('crawling '.$currentUrl);
-
 			$page = $this->getPageAndProcess($currentUrl);
 
 			if ($page->getRedirect()) {
@@ -124,7 +120,6 @@ class WebCrawler
 	protected function inSameDomain($link)
 	{
 		$parsedLink = parse_url($link);
-		//var_dump($parsedLink['host']);
 		if (!isset($parsedLink['host']) || $parsedLink['host'] == $this->parsedTarget['host']){
 			return true;
 		}
