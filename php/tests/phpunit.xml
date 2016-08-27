@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<phpunit bootstrap="./bootstrap.php"
+	 strict="true"
+	 backupGlobals="false"
+	 backupStaticAttributes="false"
+	 timeoutForSmallTests="60"
+	 timeoutForMediumTests="120"
+	 timeoutForLargeTests="240">
+</phpunit>
