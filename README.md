@@ -15,4 +15,4 @@ Run:
 ```
 php src/mondocrawler/Main.php tomblomfield.com
 ```
-This will create a file output.txt that shows the sitemap and static assets
+This will create a file tomblomfield.com.txt that shows the sitemap and static assets for the website tomblomfield.com
