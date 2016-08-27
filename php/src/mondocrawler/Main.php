@@ -22,7 +22,7 @@ class WebCrawlerCli
         $wc = new WebCrawler($args);
         $sitemap = $wc->crawl();
 
-        $this->writeToFile($sitemap);
+        $this->writeToFile($args, $sitemap);
 	}
 
     public function help()
@@ -33,9 +33,9 @@ class WebCrawlerCli
         echo "\t\t-h\tDisplays this help.\n";
     }
 
-    protected function writeToFile($sitemap)
+    protected function writeToFile($args, $sitemap)
     {
-        $file = fopen("output.txt","w");
+        $file = fopen("$args.txt","w");
         foreach ($sitemap as $url => $page) {
             fwrite($file, $url."\n");
             if ($page->getLinks()) {
