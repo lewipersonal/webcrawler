@@ -49,9 +49,12 @@ class PageTest extends PHPUnit_Framework_TestCase
 
         $expectedResult = ['http://www.gravatar.com/avatar/c833be5582482777b51b8fc73e8b0586?s=128&d=identicon&r=PG',
                            'https://px.srvcs.tumblr.com/impixu?T=1472146726&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvdG9tYmxvbWZpZWxkLmNvbVwvYWJvdXQiLCJyZXF0eXBlIjowLCJyb3V0ZSI6ImN1c3RvbV9wYWdlIiwibm9zY3JpcHQiOjF9&U=AJCKLLCJKD&K=35f6feec5b553e16bd79c8afbb0c0c1f5874d6b8736f1385ba4f619d6977bb65&R=',
+                           'http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=81465be7ec0ee40855d0652f7673c1c2',
+                           'http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=cf140c0f1704d59bad98d3be7adddfde',
                            'http://disqus.com/forums/tomblomfield/embed.js',
                            'http://requirejs.org/docs/release/1.0.3/minified/require.js',
                            'http://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=b754240effd321494a4cb840633c5e94',
+                           'http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css',
                            ];
 
         $this->assertEquals($expectedResult, $page->getStaticFiles());

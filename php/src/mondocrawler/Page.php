@@ -104,7 +104,7 @@ class Page
 		$scripts = $this->getScriptsFromDom($this->dom);
 		$styles = $this->getStylesFromDom($this->dom);
 
-		$this->setStaticFiles($images + $scripts + $styles);
+		$this->setStaticFiles(array_merge($images, $scripts, $styles));
 
 		return $this;
 	}
